@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secmlt-poisoning"
+version = "0.1.0"
+description = "Bilevel (gradient-based) poisoning attacks for secml-torch"
+requires-python = ">=3.10"
+dependencies = ["secml-torch>=1.5", "torch>=2.0"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "scikit-learn", "torchvision", "jupyter"]
+test = ["pytest", "scikit-learn"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
